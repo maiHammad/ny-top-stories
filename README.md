@@ -8,8 +8,9 @@ npm audit fix
 $ npm run start-auth
 
 How to login/register?
-  "email": "nilson@email.com",
+  {"email": "nilson@email.com",
   "password":"nilson"
+  }
   
 # NyTopStories
  install necessary backages  
