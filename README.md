@@ -1,5 +1,19 @@
-# NyTopStories
+# install and  Run local server 
+open terminal to authontication >fake-api-jwt-json-server-master
+ install necessary backages  
+ $ npm install
+ Might need to run
+npm audit fix
+ for run
+$ npm run start-auth
 
+How to login/register?
+  "email": "nilson@email.com",
+  "password":"nilson"
+  
+# NyTopStories
+ install necessary backages  
+ $ npm install
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.3.5.
 
 ## Development server
@@ -19,7 +33,8 @@ Run `ng build` to build the project. The build artifacts will be stored in the `
 Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
 
 ## Running end-to-end tests
-
+run in terminal below 
+$ ng serve
 Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
 
 ## Further help
