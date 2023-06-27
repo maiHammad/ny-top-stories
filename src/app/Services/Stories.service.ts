@@ -56,7 +56,6 @@ export class StoriesService{
 
     }
       getStoryById(id: string,category: string): Observable<Story> {
-        debugger
         let currentId:string;
         if(id==undefined){
           currentId=window.location.href.substring(window.location.href.lastIndexOf('/')+1);

@@ -74,7 +74,6 @@ export class StoriesEffects{
         withLatestFrom(this.store.select(getStories)),
 
         switchMap(([action,stories]) => {
-          debugger
           if (action!==null&&stories!==undefined) {
             return this.storiesService.getStoryById(action.id,action.category).pipe(
               map((story) => {
