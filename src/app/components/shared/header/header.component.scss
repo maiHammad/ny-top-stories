@@ -1,0 +1,13 @@
+nav.navbar.navbar-expand-lg.navbar-light.bg-light {
+    background-color: rgb(255 255 255 / 10%) !important;
+    backdrop-filter: saturate(87%) blur(10px);
+    .navbar-brand,.nav-link{
+        color: #fff;
+    }
+    .nav-link{
+        transition: 0.5s all;
+        &:hover{
+            text-decoration: underline;
+        }
+    }
+}

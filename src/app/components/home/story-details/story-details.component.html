@@ -1,0 +1,23 @@
+<div class="container" *ngIf="storyDetails | async as postData">
+    <div class="row  align-items-center justify-content-center">
+           <div class="col-md-9 rounded mt-3 p-3 detailsCont">
+            <article class="blog-post">
+                <h2 class="blog-post-title">{{ postData.title }}</h2>
+              </article>
+              <h5 class="pb-4 mb-4 fst-italic border-bottom">
+                <span>From section</span>{{ postData.section }}<span> - </span>{{postData.subsection }}
+              </h5>
+              <h5 class="pb-4 mb-4 fst-italic border-bottom">
+                By {{ postData.byline }} <span>from</span> {{postData.geo_facet }}
+              </h5>
+              <p class="blog-post-meta">{{ postData.published_date }} Updated on {{postData.updated_date}}</p>
+
+            <div class="p-2 p-md-5 mb-4  text-white rounded bg-dark">
+                <img class="w-100" attr.src="{{postData.firstImage}}"/>
+            </div>
+
+          <p>{{ postData.abstract}}</p>
+    </div> 
+    </div>
+    
+</div>

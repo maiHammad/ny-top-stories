@@ -1,0 +1,42 @@
+<div class="container-fluid">
+  <div class="row  align-items-center justify-content-center">
+  <div class="col-md-4  mt-5 p-4 login-container">
+    <h2 class="text-center text-white">Login</h2>
+    <hr />
+    <form [formGroup]="loginForm"  (ngSubmit)="onLoginSubmit()">
+        <div class="mb-3">
+            <label class="form-label text-white" for="email" >Email</label>
+            <input
+            type="text"
+            id="email"
+            formControlName="email"
+            class="form-control"
+            [ngClass]="{ 'is-invalid': formValidate['email'].touched &&formValidate['email'].errors }"
+          />
+          <div *ngIf=" formValidate['email'].touched && formValidate['email'].errors" class="invalid-feedback">
+                <div class="alert alert-danger" *ngIf="formValidate['email'].errors['required']">Email is required</div>
+                <div class="alert alert-danger" *ngIf="formValidate['email'].errors['email']">Email is invalid</div>
+              </div>
+        </div>
+        <div class="mb-3">
+            <label class="form-label text-white" for="password">Password</label>
+            <input
+            id="password"
+            type="password"
+            formControlName="password"
+            class="form-control"
+            [ngClass]="{ 'is-invalid':formValidate['email'].touched && formValidate['password'].errors }"
+          />
+          <div *ngIf="formValidate['password'].touched && formValidate['password'].errors" class="invalid-feedback">
+            <div class="alert alert-danger" *ngIf="formValidate['password'].errors['required']">Password is required</div>
+          </div>        
+        </div>
+        <div class=" align-items-center justify-content-center row">
+          <div class="col-8">
+            <button type="submit" class="btn btn-primary w-100" [disabled]="!loginForm.valid">Login</button>
+
+          </div>
+        </div>
+    </form>
+</div>
+</div>

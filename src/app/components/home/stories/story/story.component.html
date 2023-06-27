@@ -1,0 +1,18 @@
+<div class="row" *ngIf="storiesList !==undefined">
+    <div *ngFor="let story of storiesList | async" class="col-md-6">
+        <div attr.id="{{story.id}}" class="row g-0 border storyCont rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+          <div class="col-8 p-4 d-flex flex-column position-static">
+            <span class="d-inline-block mb-2 text-white">{{story.section}} - {{story.subsection}}</span>
+            <h4 class="mb-0 text-white">{{story.title}}</h4>
+            <div class="mb-1 text-muted">{{story.published_date}}</div>
+            <p class="mb-1">{{story.abstract}}</p>
+             <a href="#" [routerLink]="['/home/details/',story.id]" class="stretched-link text-primery">Read More</a>
+          </div>
+          <div class="col-4 d-none d-lg-block"  *ngIf="story.multimedia !== undefined && story.multimedia !== null">
+            <img class="bd-placeholder-img" attr.src="{{story.firstImage}}" />      
+          </div>
+        </div>
+      </div>
+</div>
+
+
